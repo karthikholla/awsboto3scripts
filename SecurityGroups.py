@@ -1,3 +1,5 @@
+#Still work  in Progress
+
 import boto3
 from datetime import datetime
 import json
@@ -8,7 +10,7 @@ region_list = ['eu-west-1', 'eu-central-1', 'us-east-1', 'us-west-1', 'us-west-2
 for region in region_list:
     ec2 = boto3.resource('ec2', region_name=region)
     sns = boto3.resource('sns')
-    platform_endpoint = sns.PlatformEndpoint('arn:aws:sns:us-east-1:691693565742:Karthik_SNS_Test')
+    platform_endpoint = sns.PlatformEndpoint('arn:aws:sns:us-east-1:XXXX:XXXX')
     result = " The Following SG's are opened to Public(0.0.0.0/0) on Port 22 & 3389 \n"
     x = 0
     for sg in ec2.security_groups.iterator():
